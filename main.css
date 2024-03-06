@@ -1,0 +1,430 @@
+@font-face {
+    font-family: 'aleg';
+    src: url('./fonts/AlegreyaSansSC-Black.ttf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+};
+
+:root {
+    --yellow: #ffc92f;
+    --red: #d82727;
+    --black: #1b1b1b;
+    
+}
+
+html,
+body {
+    height: 100%;
+    font-family: "Roboto", sans-serif;
+    color: #212121;
+}
+
+.wrapper {
+    overflow: hidden;
+    min-width: 1310px;
+}
+
+.hero {
+    height: 100vh;
+    min-height: 650px;
+    background: url('./img/bg/hero.jpg') center center / cover no-repeat;
+    position: relative;
+}
+
+.header {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.mail {
+    text-decoration: none;
+    text-align: center;
+    font-size: 16px;
+    color: #212121;
+}
+
+.mail__title {
+    margin-bottom: 3px;
+}
+
+.mail__content {
+    background: #212121;
+    color: #ffbc2f;
+    padding: 5px;
+}
+
+.hero__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1140px;
+    height: 72%;
+    transform: translate(-50%, -50%);
+}
+
+.fade-slider {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.fade-slider__item {
+    background: center center /contain no-repeat;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.fade-slider__item-visible {
+    opacity: 1;
+}
+
+.fade-slider__item-1 {
+    background: url('./img/content/hero/slider_pic_1.png');
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.fade-slider__item-2 {
+    background: url('./img/content/hero/slider_pic_2.png');
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.fade-slider__item-3 {
+    background: url('./img/content/hero/slider_pic_3.png');
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.fade-slider__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-190%, -72%);
+}
+
+.lined-text {
+    font-family: 'aleg';
+    color: white;
+    font-size: 63px;
+    text-transform: uppercase;
+    line-height: 0.8;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.lined-text__word {
+    background: #000;
+    padding: 7px 17px 8px;
+}
+
+.lined-text__word-yellow {
+    color: yellow;
+}
+
+.lined-text__word:nth-child(2n) {
+    margin-left: 8px;
+}
+
+.ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul>li {
+    list-style: none;
+}
+
+.filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-block: 100px;
+}
+
+.filter__link {
+    text-transform: uppercase;
+    padding: 7px 21px;
+    color: #1b1b1b;
+    display: inline-block;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 20px;
+}
+.filter__item {
+    margin-right: 40px;
+}
+
+.filter__item:last-child {
+    margin-right: 0;
+}
+
+.filter__link:hover {
+    color: red;
+}
+
+.filter__item--active .filter__link {
+    color: #ffc92f;
+    background-color: #1b1b1b;
+}
+
+.container {
+    margin: p auto;
+}
+
+.products__item {
+    width: 302px;
+    height: 400px;
+    background: rgb(248, 212, 5);
+    margin: 30px;
+    position: relative;
+}
+
+.products__item:hover .products__desc{
+    display: flex;
+    transform: translateY(0);
+}
+
+.products__content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.products__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 25px;
+}
+
+.products__desc {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   padding: 23px 30px;
+   background: rgba(35, 35, 35, .8);
+   font-size: 15px;
+   color: white;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   transform: translateY(100%);
+   transition: transform .6s;
+   
+}
+
+.products__desc-text {
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.products__img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.btn {
+    text-transform: uppercase;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 24px;
+    padding: 2px 30px;
+    background: black;
+    color: rgb(248, 212, 5);
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: red;
+    color: white;
+}
+
+.products__item--black {
+    background: #232323;
+}
+.products__item--double {
+    width: 610px;
+    height: 544px;
+}
+
+.products__price {
+    position: absolute;
+    top: 0;
+    left: -10px;
+    height: 80px;
+    width: 100px;
+    /* border: 2px solid #232323; */
+    clip-path: polygon(0 6%, 100% 0, 94% 43%, 4% 42%);
+    background: #232323;
+    color: white;
+}
+
+.products__price--amount {
+    font-size: 24px;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.products__price--amount_black {
+    background: rgb(248, 212, 5);
+    color: black;
+}
+
+.collections__list {
+    display: flex;
+}
+
+.collections__item {
+    min-height: 474px;
+    flex: 1;
+    overflow: hidden;
+    margin-right: 30px;
+    background: url('./img/bg/pattern.png') center center / 500px;
+    position: relative;
+}
+
+.collections__item:last-child {
+    margin-right: 0;
+}
+
+.collections__link {
+    display: block;
+    padding: 70px 13% 70px 44%;
+    text-decoration: none;
+    color: inherit;
+    box-sizing: border-box;
+}
+
+.collections__title {
+    font-size: 70px;
+    font-weight: bold;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 11px;
+}
+
+.collections__desc {
+    margin-bottom: 28px;
+}
+
+.collections__item:before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 150%;
+    width: 60%;
+    top: -25px;
+    left: -10%;
+    background: center center / contain no-repeat;
+}
+
+.collections__item--man:before {
+    background-image: url('./img/collections/collection_man.png');
+}
+.collections__item--girl:before {
+    background-image: url('./img/collections/collection_woman.png');
+}
+
+.collections__link:hover .btn{
+    background: red;
+    color: #fff;
+    width: 300px;
+}
+
+.sidebar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 325px;
+    background: #212121;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: width 1s;
+}
+
+.sidebar__header {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sidebar__close {
+    width: 50px;  
+    text-decoration: none;
+    color: white;
+}
+
+.close {
+    font-size: 40px;
+    text-decoration: none;
+    margin: 0;
+}
+
+.side-menu__item {
+    color: white;
+
+}
+
+.side-menu__link {
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.side-menu__link:hover {
+    color: red;
+}
+
+.sidebar--close {
+    width: 50px;
+}
+
+.sidebar--close .sidebar__header {
+    display: none;
+}
+
+.sidebar--close .side-menu__item {
+    display: none;
+}
+
+.sidebar--open-img {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+}
+
+.sidebar--open .sidebar--open-img {
+    display: none;
+}
